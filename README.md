@@ -183,7 +183,7 @@ esta nos permite llegar a una dirección de memoria que no contiene caracteres n
 * Finalmente, nuestro exploit se conforma de las siguientes partes
 
 	* String basura, que es del tamaño de bytes para llegar hasta el registro EPI, para le caso de blazevideo es de 260 
-	* En este punto estamos sobre el registro EPI el cual modificaremos con la dirección de salto JMP A ESP la cual nos llevara a la sima de pila **La dirección debe ser puesta en formato hex y con reves por el formato little endian, el cual viene por defecto en procesadores como intel**
+	* En este punto estamos sobre el registro EPI el cual modificaremos con la dirección de salto JMP A ESP la cual nos llevara a la sima de pila **La dirección debe ser puesta en formato hex y con de atras hacia adelante, esto por el formato little endian, el cual viene por defecto en procesadores como intel**
 
 Ejemplo
  direccion = 750927EF
