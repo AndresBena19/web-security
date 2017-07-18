@@ -1,6 +1,6 @@
 # Blazevideo HDTV player PRO 6.(Bufferoverflow)#
 
-Lo siguiente es la muestra de cómo gracias a una mala estructura de programación se es posible modificar el registro EPI y así cambiar su dirección de salto a un registro ESP que apunta a la sima de stack, para obtener una sesión de meterpreter.
+Lo siguiente es la muestra de cómo gracias a una mala estructura de programación se es posible modificar el registro EPI y manipularlo a conveniencia, para ejecutar codigo malicioso.
 
 ##Payload##
 
