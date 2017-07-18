@@ -60,7 +60,7 @@ Lo haremos por medio de un archivo de lista de reproducción .plf  (play list)
 
 ![alt-text](img/1.png)
 
-Coon esto comprobamos que existen un bufferoverflow, ya que los registros consiguiente al que debería guardar la variable de entrada se han modificado, y lo más importante hemos alcanzado el registro EPI 
+Con esto comprobamos que existen un bufferoverflow, ya que los registros consiguiente al que debería guardar la variable de entrada se han modificado, y lo más importante hemos alcanzado el registro EPI 
 
 * Después de comprobar que el registro es modificable, usamos el script en ruby  **pattern-create.rb**. Este lo encontramos en la siguiente ruta **/usr/share/metasploit-framework/tools/exploit/pattern_create.rb**.
 
