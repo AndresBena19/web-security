@@ -179,6 +179,7 @@ Ejemplo
  var = "\xEF\x27\x09\x75"
 ```
  	
+```
 
 * En ese paso sucede algo interesante, nuestro código se encuentra correcto, pero no se ejecuta nuestra shellcode. Esto se debe a que la cantidad de bytes que necesitábamos para llegar a EIP no es la misma ahora que nos encontramos en el stack, por eso al saltar a la sima he inyectar la shellcode esta no se ejecuta ya que existen espacios entre el salto y donde se ejecuta nuestra shell.
 
@@ -195,6 +196,5 @@ Ejemplo
 ![alt-text](img/5.png)
 
 * Finalmente inyéctanos y nuestra shellcode ejecutada con éxito
-```
 
 ![alt-text](img/6.p
