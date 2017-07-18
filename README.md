@@ -191,8 +191,8 @@ Ejemplo
 
 	Aproximada mente 3 nops equivaldrían a un byte, para esto usaremos como enlace 60 nops este se agregaran en nuestro script final entre el saldo a la sima del stack y la shellcode
 	
-![alt-text](/root/github/github/img/5.png)
+![alt-text](img/5.png)
 
 * Finalmente inyéctanos y nuestra shellcode ejecutada con éxito
 
-![alt-text](/root/github/github/img/6.png)
+![alt-text](
