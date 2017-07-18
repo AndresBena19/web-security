@@ -190,7 +190,7 @@ Ejemplo
 	Por lo tanto, tenemos una diferencia de 20 bytes que no permiten que el flujo de ejecución llegue hasta a dirección donde nuestra shellcode se ejecuta
 
 	Aproximada mente 3 nops equivaldrían a un byte, para esto usaremos como enlace 60 nops este se agregaran en nuestro script final entre el saldo a la sima del stack y la shellcode
-	
+```	
 ![alt-text](img/5.png)
 
 * Finalmente inyéctanos y nuestra shellcode ejecutada con éxito
