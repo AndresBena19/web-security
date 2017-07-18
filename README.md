@@ -110,6 +110,9 @@ Nota: con '-q' ingresaremos la dirección a la que apunta el registro EPI, en nu
 	* después de esta ingresamos un valor aleatorio pero reconocible, en nuestro caso "BBBB" que en el hex es 42424242
 	por ende, después de la ejecución el registro EPI debe estar apuntando hacia esto, esto lo veremos 	gracias a la sección el stack en el sofware immunity-debuger
 	
+	
+![alt-text](img/8.png)
+
 ![alt-text](img/3.png)
 
 * Ya teniendo lo anterior comprobado, nos aseguramos que el software victima soporte el fuzzing de todos los caracteres posible
