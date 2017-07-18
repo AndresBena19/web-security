@@ -170,7 +170,7 @@ Shellcode
 "\xb5\xf1\x6c\x89\x42\xde\x83\x79\xaa\xf5\xcb\x11\x21\x9b\xbe"
 "\x80\x36\xb6\x1f\x1d\x36\x34\x84\x48\xb9\xbb\x3b\x75\x3b\x80"
 "\xed\x4c\x49\xc1\x2d\xeb\x42\x78\x13\x5a\xc9\x82\x07\x9c\xd8"
-```
+
 *Si notamos nuestra shellcode no contiene los caracteres, x00,x0a,x01a, por lo ya anteriormente dicho*
 
 * Después de esto debemos manipular el registro de salto EPI para que nos lleve a la sima de la pila, para eso usaremos CALL JUMP  ESP
@@ -185,13 +185,12 @@ esta nos permite llegar a una dirección de memoria que no contiene caracteres n
 	* String basura, que es del tamaño de bytes para llegar hasta el registro EPI, para le caso de blazevideo es de 260 
 	* En este punto estamos sobre el registro EPI el cual modificaremos con la dirección de salto JMP A ESP la cual nos llevara a la sima de pila **La dirección debe ser puesta en formato hex y con reves por el formato little endian, el cual viene por defecto en procesadores como intel**
 
-``` 
 Ejemplo
  direccion = 750927EF
 
  En nuestro codigo la variable a inyectar debe estar de la siguiente forma
  var = "\xEF\x27\x09\x75"
-```
+
  
 
 * En ese paso sucede algo interesante, nuestro código se encuentra correcto, pero no se ejecuta nuestra shellcode. Esto se debe a que la cantidad de bytes que necesitábamos para llegar a EIP no es la misma ahora que nos encontramos en el stack, por eso al saltar a la sima he inyectar la shellcode esta no se ejecuta ya que existen espacios entre el salto y donde se ejecuta nuestra shell.
@@ -205,7 +204,7 @@ Ejemplo
 	Por lo tanto, tenemos una diferencia de 20 bytes que no permiten que el flujo de ejecución llegue hasta a dirección donde nuestra shellcode se ejecuta
 
 	Aproximada mente 3 nops equivaldrían a un byte, para esto usaremos como enlace 60 nops este se agregaran en nuestro script final entre el saldo a la sima del stack y la shellcode
-```	
+	
 ![alt-text](img/5.png)
 
 * Finalmente inyéctanos y nuestra shellcode ejecutada con éxito
