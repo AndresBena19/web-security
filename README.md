@@ -127,7 +127,7 @@ ingresamos esa cadena al script -> stackB.py y ejecutamos
 
 *Todos estos caracteres seran inyectados con tal de comprobar si el sofware los admite*
 
-	 En el caso de blazevideo version  6.6 Este nos rechaza los  caracteres **x00** también conocido como byte nulo y **x0a,x1**, estos  debe ser eliminados al momento de generar la shellcode, para que asi el flujo de ejecución sea continuo y no se interrumpa **para comprobar que todo se llevó a cabo, primero deben estar el string basura ingresado, después la dirección a la que apunta EPI y finalmente desde X00 hasta FFFF
+	 En el caso de blazevideo version  6.6 Este nos rechaza los  caracteres **x00** también conocido como byte nulo y **x0a,x1a**, estos  debe ser eliminados al momento de generar la shellcode, para que asi el flujo de ejecución sea continuo y no se interrumpa **para comprobar que todo se llevó a cabo, primero deben estar el string basura ingresado, después la dirección a la que apunta EPI y finalmente desde X00 hasta FFFF
 	 
 
 ![alt-text](img/4.png)
@@ -171,6 +171,8 @@ Shellcode
 "\x80\x36\xb6\x1f\x1d\x36\x34\x84\x48\xb9\xbb\x3b\x75\x3b\x80"
 "\xed\x4c\x49\xc1\x2d\xeb\x42\x78\x13\x5a\xc9\x82\x07\x9c\xd8"
 ```
+*Si notamos nuestra shellcode no contiene los caracteres, x00,x0a,x01a, por lo ya anteriormente dicho*
+
 * Después de esto debemos manipular el registro de salto EPI para que nos lleve a la sima de la pila, para eso usaremos CALL JUMP  ESP
 esta nos permite llegar a una dirección de memoria que no contiene caracteres nulos y ademas a dirección permitidas, esto dado a que son direcciones de las librerías dll de windows, que son necesaria para la mayoría de programa del S.O
 
