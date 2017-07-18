@@ -195,4 +195,4 @@ Ejemplo
 
 * Finalmente inyéctanos y nuestra shellcode ejecutada con éxito
 
-![alt-text](/root/github/github/img/g.png)
+![alt-text](/root/github/github/img/6.png)
