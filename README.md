@@ -52,7 +52,8 @@ Lo haremos por medio de un archivo de lista de reproducción .plf  (play list)
 * Finalexploit.py
 	1. Este código genera el payload .plf listo para vulnerar blazevideo HDTV player PROversion 6.6
 
-## Paso ##
+
+## Pasos ##
 
 * Comprovamos que el registro EPI es modificable, para eso eso usamos el script  **exploitA.py**
 
@@ -194,5 +195,6 @@ Ejemplo
 ![alt-text](img/5.png)
 
 * Finalmente inyéctanos y nuestra shellcode ejecutada con éxito
+```
 
 ![alt-text](img/6.p
