@@ -197,9 +197,9 @@ Ejemplo
 
 	Para esto tenemos los nops, que nos ayudan a unir el vacio entre la dirección donde saltamos con **JMP ESP** y la dirección donde ejecutamos nuestra shellcode, para hacernos razon de esto podemos fiarnos de la cantidad de bytes que el script **pattern_offset** nos dio
 
-	En el caso de EPI la cantidad de  bytes necesarios para llegar a ese registro eran 260
+	* En el caso de EPI la cantidad de  bytes necesarios para llegar a ese registro eran 260
 
-	En el caso de ESP que apunta ala sima del stack la cantidad de bytes necesario para llegar a ese registro eran 280 
+	* En el caso de ESP que apunta ala sima del stack la cantidad de bytes necesario para llegar a ese registro eran 280 
 
 	Por lo tanto, tenemos una diferencia de 20 bytes que no permiten que el flujo de ejecución llegue hasta a dirección donde nuestra shellcode se ejecuta
 
