@@ -132,7 +132,7 @@ ingresamos esa cadena al script -> stackB.py y ejecutamos
 
 ![alt-text](img/4.png)
 
-finalmente vemos que  al eliminar los 3 caracteres no aceptadas el flujo es continuo y la ejecuacion llega hasta las ¨C", lo que no indica que acepto todos los caracteres anteriormente inyectado
+finalmente vemos que  al eliminar los 3 caracteres no aceptados el flujo es continuo y la ejecuacion llega hasta las ¨C", lo que no indica que acepto todos los caracteres anteriormente inyectado
 
 **Teniendo en cuenta lo anterior y siendo concientes de que podemos modificar el registro EPI, podemos dejar de  inyectar caracteres aleorior e introducir un shellcode.**
 
