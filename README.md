@@ -8,7 +8,7 @@ Lo haremos por medio de un archivo de lista de reproducción .plf  (play list)
 
 ## Requerimientos ##
 
-+ Metasploit
++ Metasploit-framework
 
 + Pattern-create.rb
 	
