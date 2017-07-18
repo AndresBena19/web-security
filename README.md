@@ -29,7 +29,7 @@ Lo haremos por medio de un archivo de lista de reproducción .plf  (play list)
 	* Nos permite ejecutar el software victima en un ambiente virtualizado
 
 
-##Script's##
+## Script's ##
 
 
 + CHAR-malicioso.py
