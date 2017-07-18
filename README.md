@@ -127,10 +127,12 @@ ingresamos esa cadena al script -> stackB.py y ejecutamos
 
 *Todos estos caracteres seran inyectados con tal de comprobar si el sofware los admite*
 
-	* En el caso de blazevideo version  6.6 Este nos rechaza los  caracteres **x00** también conocido como byte nulo y **x0a,x1**, estos  debe ser eliminados al momento de generar la shellcode, para que asi el flujo de ejecución sea continuo y no se interrumpa **para comprobar que todo se llevó a cabo, primero deben estar el string basura ingresado, después la dirección a la que apunta EPI y finalmente desde X00 hasta FFFF**
- 
+	 En el caso de blazevideo version  6.6 Este nos rechaza los  caracteres **x00** también conocido como byte nulo y **x0a,x1**, estos  debe ser eliminados al momento de generar la shellcode, para que asi el flujo de ejecución sea continuo y no se interrumpa **para comprobar que todo se llevó a cabo, primero deben estar el string basura ingresado, después la dirección a la que apunta EPI y finalmente desde X00 hasta FFFF
+	 
 
 ![alt-text](img/4.png)
+
+finalmente vemos que  al eliminar los 3 caracteres no aceptadas el flujo es continuo y la ejecuacion llega hasta las ¨C", lo que no indica que acepto todos los caracteres anteriormente inyectado
 
 **Teniendo en cuenta lo anterior y siendo concientes de que podemos modificar el registro EPI, podemos dejar de  inyectar caracteres aleorior e introducir un shellcode.**
 
