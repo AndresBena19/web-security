@@ -158,7 +158,6 @@ Shellcode
 "\x80\x36\xb6\x1f\x1d\x36\x34\x84\x48\xb9\xbb\x3b\x75\x3b\x80"
 "\xed\x4c\x49\xc1\x2d\xeb\x42\x78\x13\x5a\xc9\x82\x07\x9c\xd8"
 ```
-
 * Después de esto debemos manipular el registro de salto EPI para que nos lleve a la sima de la pila, para eso usaremos CALL JUMP  ESP
 esta nos permite llegar a una dirección de memoria que no contiene caracteres nulos y ademas a dirección permitidas, esto dado a que son direcciones de las librerías dll de windows, que son necesaria para la mayoría de programa del S.O
 
@@ -178,8 +177,7 @@ Ejemplo
  En nuestro codigo la variable a inyectar debe estar de la siguiente forma
  var = "\xEF\x27\x09\x75"
 ```
- 	
-```
+ 
 
 * En ese paso sucede algo interesante, nuestro código se encuentra correcto, pero no se ejecuta nuestra shellcode. Esto se debe a que la cantidad de bytes que necesitábamos para llegar a EIP no es la misma ahora que nos encontramos en el stack, por eso al saltar a la sima he inyectar la shellcode esta no se ejecuta ya que existen espacios entre el salto y donde se ejecuta nuestra shell.
 
