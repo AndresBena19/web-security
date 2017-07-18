@@ -5,8 +5,8 @@ logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
 
 if len(sys.argv) != 2:
- print "Usage - ./arp_disc.py [interface]"
- print "Example - ./arp_disc.py eth0"
+ print "Usage - ./ARPscan.py [interface]"
+ print "Example - ./ARPscan.py eth0"
  print "Example will perform an ARP scan of the local subnet to which eth0 is assigned"
  sys.exit()
     

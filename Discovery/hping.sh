@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ "$#" -ne 1 ]; then
-echo "Usage - ./ping_sweep.sh [/24 network address]"
-echo "Example - ./ping_sweep.sh 172.16.36.0"
+echo "Usage - ./hping_sweep.sh [/24 network address]"
+echo "Example - ./hping_sweep.sh 172.16.36.0"
 echo " Example will perform an ICMP ping sweep of the 172.16.36.0/24 network"
 exit
 fi

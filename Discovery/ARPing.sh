@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ "$#" -ne 1 ]; then
-echo "Usage - ./arping.sh [interface]"
-echo "Example - ./arping.sh eth0"
+echo "Usage - ./ARPing.sh [interface]"
+echo "Example - ./ARPing.sh eth0"
 echo "Example will perform an ARP scan of the local subnet to which eth0 is assigned"
 exit
 fi
