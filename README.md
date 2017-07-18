@@ -195,4 +195,4 @@ Ejemplo
 
 * Finalmente inyéctanos y nuestra shellcode ejecutada con éxito
 
-![alt-text](img/6.p
+![alt-text](img/6.p)
