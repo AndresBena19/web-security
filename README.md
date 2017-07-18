@@ -55,7 +55,7 @@ Lo haremos por medio de un archivo de lista de reproducción .plf  (play list)
 
 ## Pasos ##
 
-* Comprovamos que el registro EPI es modificable, para eso eso usamos el script  **exploitA.py**
+* Comprovamos que el registro EIP es modificable, para eso eso usamos el script  **exploitA.py**
 
 
 ![alt-text](img/1.png)
