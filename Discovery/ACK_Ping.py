@@ -1,4 +1,5 @@
 #!/usr/bin/python
+
 import logging
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
@@ -11,13 +12,13 @@ if len(sys.argv) != 2:
     
 address = str(sys.argv[1])
 
-prefix = address.split('.')[0] + '.' + address.split('.')[1] + '.' +
-address.split('.')[2] + '.'
+prefix = address.split('.')[0] + '.' + address.split('.')[1] + '.' + address.split('.')[2] + '.'
+
 for addr in range(1,254):
  response = sr1(IP(dst=prefix+str(addr))/TCP(dport=80,flags='A'),
-timeout=1,verbose=0)
+ timeout=1,verbose=0)
  try:
- if int(response[TCP].flags) == 4:
- print "172.16.36."+str(addr)
+  if int(response[TCP].flags) == 4:
+   print "172.16.36."+str(addr)
  except:
- pass
+   pass

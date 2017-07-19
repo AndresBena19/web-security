@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import logging
 
-logging.getLogger("scapy.runtime").s
+logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
 import time
 import sys
@@ -21,7 +21,7 @@ for port in range(start,end):
  time.sleep(1)
 
  if ans == None:
- print port
+  print port
 
  else:
- pass
+  pass

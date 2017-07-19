@@ -19,10 +19,10 @@ for port in range(start,end):
  ans = sr1(IP(dst=ip)/TCP(dport=port),timeout=1,verbose=0)
 
  if ans == None:
- pass
+  pass
  else:
 
- if int(ans[TCP].flags) == 18:
- print port
- else:
- pass
+  if int(ans[TCP].flags) == 18:
+   print port
+  else:
+   pass
