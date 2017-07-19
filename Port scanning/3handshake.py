@@ -16,8 +16,7 @@ response.display()
 if int(response[TCP].flags) == 18:
     
  print "\n\n-- SENT --"
- ACK = IP(dst="172.16.36.135")/TCP(dport=80,flags='A',ack=(response[
- TCP].seq + 1))
+ ACK = IP(dst="172.16.36.135")/TCP(dport=80,flags='A',ack=(response[TCP].seq + 1))
  response2 = sr1(ACK,timeout=1,verbose=0)
  ACK.display()
     
