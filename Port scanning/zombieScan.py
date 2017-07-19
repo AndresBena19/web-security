@@ -10,8 +10,7 @@ def ipid(zombie):
  reply2 = sr1(IP(dst=zombie)/TCP(flags="SA"),timeout=2,verbose=0)
 
  if reply2[IP].id == (reply1[IP].id + 2):
- print "IPID sequence is incremental and target appears to be
- idle. ZOMBIE LOCATED"
+ print "IPID sequence is incremental and target appears to be idle. ZOMBIE LOCATED"
  response = raw_input("Do you want to use this zombie to performa scan? (Y or N): ")
 
  if response == "Y":
@@ -19,7 +18,6 @@ def ipid(zombie):
  zombiescan(target,zombie)
 
  else:
-
  print "Either the IPID sequence is not incremental or the target is not idle. NOT A GOOD ZOMBIE"
 
 def zombiescan(target,zombie):
