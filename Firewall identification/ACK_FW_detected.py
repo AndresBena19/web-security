@@ -21,7 +21,7 @@ SYN_response =sr1(IP(dst=ip)/TCP(dport=port,flags='S'),timeout=1,verbose=0)
 
 if (ACK_response == None) and (SYN_response == None): #Si no se recibe respuesta en ninguno a ninguno de los  dos paquetes, es muy probable que el host este dowm
  print "Port is either unstatefully filtered or host is down"
-elif ((ACK_response == None) or (SYN_response == None)) and not ((ACK_response ==None) and (SYN_response == None)): #En caso de que almenos  alguno  de los enviados hay recibido respuesta
+elif ((ACK_response == None) or (SYN_response == None)) and not ((ACK_response ==None) and (SYN_response == None)): #En caso de que  alguno  de los paqueets enviados haya recibido respuesta
  														    #podemos considerar  que el puerto se encuentra filtrado
  print "Stateful filtering in place" 
 elif int(SYN_response[TCP].flags) == 18: #Si el valor del flag en al cabecera TCP es de 18, es decir SYN ACK, significa que el host respondio exitosamente, confirmando la sincronizacion de una conexion
