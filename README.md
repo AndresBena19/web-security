@@ -1,6 +1,6 @@
 # NOTA #
 
-Algunos de los scripts aqui mostrados son una repolacion del libro:
+Muchos  de los scripts aqui mostrados son una repolacion practica de teoria mostrada en el libro:
 
   * kali_linux_network_scanning_cookbook_-_hutchens_justin
 
