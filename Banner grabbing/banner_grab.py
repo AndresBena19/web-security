@@ -18,9 +18,13 @@ for port in range(start,end):
    try:
     bangrab = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     bangrab.connect((ip, port))
-    ready = select.select([bangrab],[],[],1)
-
-    if ready[0]:
+    ready = select.select([bangrab],[],[],1) #Usando el objeto select podremos determinar si en la respuesta se encuentra algo legibel
+					     #ya que existen servicios que se encuentran corriendo, pero no ofrecen un bannerde conexion
+					     #este objeto necesita de 4 argumentos, " a read list, a write list, an exception list, and an integer value"
+					     #en este caso solo nos interesa el  argumento de  lectura, los demas los dejamos vacios y el valor entero en 1, que  define el numero 
+					     #de segundos en espera, para la conexion *timeout* 
+					     #Nota= Select nos retorna un array
+    if ready[0]: 
      print "TCP Port " + str(port) + " - " + bangrab.recv(4096)
      bangrab.close()
    except:
