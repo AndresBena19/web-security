@@ -20,8 +20,9 @@ for port in range(start,end):
  ans = sr1(IP(dst=ip)/UDP(dport=port),timeout=5,verbose=0)
  time.sleep(1)
 
- if ans == None:
+ if ans == None: #Si  la  variable ans no contiene  respuesta, entonces en este  puerto se encuentra un servicio <Por el momento desconocido>
   print port
 
- else:
+ else: #De lo contrario, si hubiese  habido una respuesta, este debio ser en funcion de que el puerto esta cerrado
+       #Este tipo de respuesta es port unreachable, en el valor code, de la cabecera ICMP
   pass

@@ -16,7 +16,7 @@ start = int(sys.argv[2])
 end = int(sys.argv[3])
 
 for port in range(start,end):
- ans = sr1(IP(dst=ip)/TCP(dport=port),timeout=1,verbose=0)
+ ans = sr1(IP(dst=ip)/TCP(dport=port),timeout=1,verbose=0) #La cabecera TCP, trae por defecto el flag S activo, para iniciar la sincronizacion
 
  if ans == None:
   pass

@@ -18,7 +18,7 @@ for addr in range(1,254):
  response = sr1(IP(dst=prefix+str(addr))/TCP(dport=80,flags='A'),
  timeout=1,verbose=0)
  try:
-  if int(response[TCP].flags) == 4:
+  if int(response[TCP].flags) == 4: # Si atributi flags de nuestra respues contiene el numero 4 (Este valor es asociado a el flag RST) entonces  nuestra maquina a escanear se encuentra activa, ya que respondio exitosamente
    print "172.16.36."+str(addr)
  except:
    pass

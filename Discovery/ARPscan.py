@@ -16,7 +16,7 @@ prefix = ip.split('.')[0] + '.' + ip.split('.')[1] + '.' + ip.split('.')[2] + '.
                              
 for addr in range(0,254):
  answer=sr1(ARP(pdst=prefix+str(addr)),timeout=1,verbose=0)
- if answer == None:
+ if answer == None: 
   pass
- else:
+ else: #Si nuestra respuesta contiene algo, seguramente  es la MAC en el campo hwdst  de la cabecera  ARP, de lo contrario, ninguna respues hubiese sido  detecta despues de  la difusion broadcast
   print prefix+str(addr)
