@@ -210,3 +210,14 @@ Ejemplo
 * Finalmente inyéctanos y nuestra shellcode ejecutada con éxito
 
 ![alt-text](img/6.png)
+
+
+---------------------------------------------------------------------
+
+ # NOTA #
+
+Muchos de los scripts aqui mostrados son una repolacion del libro
+
+  * kali_linux_network_scanning_cookbook_-_hutchens_justin,
+ 
+Todo lo aqui mostrado  lo hago con fines educativos y con la intencion de hacer entendible el objetivos de estos, ya que el libro se encuentra en ingles
