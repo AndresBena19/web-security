@@ -25,7 +25,7 @@ esto lo hace mediante una peticion SSDP NOTIFIY, la cual se envia periodicamente
 
 ![alt-text](img/notify.png)
 
-Tambien cuandoo nuestro dispositivo quiere encontrar a otro dispositivo UPnp este o hace enviando una peticion SSDP MSEARCH 
+Tambien cuando nuestro dispositivo quiere encontrar a otro dispositivo que soporte UPnp, este lo hace enviando una peticion SSDP MSEARCH 
 
 ![alt-text](img/msearch.png)
 
