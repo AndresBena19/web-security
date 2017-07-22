@@ -58,7 +58,7 @@ Si preguntan ese link que se encuentra en medio de las peticiones a que sitio re
 
 Dado a que por medio de UPnp se es posible modificar la apertura o cierro de los puertos en el router, es posible que un atancante, consiga redireccionar los puerto, lo que significaria un MITM o hacer publico el panel de administracion del router y porque no, backdorizar el sistema.
 
-¿Pero se es necesario estar inclusido en la red local para hacer el ataque?
+¿Pero se es necesario estar incluido en la red local para hacer el ataque?
 
 La respuesta es NO, dado a que es  un protocolo que normalmente solo funciona dentro de una red local, lo que forzaria al atacante a infiltrase a la red local, para explotar las vulnerabilidades
 
