@@ -49,8 +49,7 @@ Primero ejecutamos en nuestra shell, el comando miranda el cual nos brindara un 
 
 Como podemos ver aquellos dispositivos compatibles con UPnp se encuentran emitienco peticiones MSEARCH o NOTIFY y gracias a esto, tenemos un indicio del S.0 que utiliza.
 
-Si preguntan ese link que se encuentra en medio de las peticiones a que sitio redirige, Es UPnP utilizando SOAP para el intercambio   y transmision de paquetes donde describre y especifica
-las configuracionES y dispositivos soportados, esta informacion viaja junto a los paquetes msearch y notify con el que podremos obtener mucha mas informacion acerca de nuestro objetivo, pero por lo que esta face concierne, solo la utilizamos para intentar descubrir el tipo y version de sistemas operativo de nuestra victima
+Si preguntan ese link que se encuentra en medio de las peticiones a que sitio redirige, Es UPnP utilizando SOAP el cual usa XML para estructurar la información enviada entre las dos partes. Las peticiones SOAP son esencialmente peticiones HTTP POST con alguna cabecera SOAP adicional incluida en las cabeceras HTTP, la cual trae consigolas configuraciones y dispositivos soportados, esta informacion viaja junto a los paquetes msearch y notify con el que podremos obtener mucha mas informacion acerca de nuestro objetivo, pero por lo que esta face concierne, solo la utilizamos para intentar descubrir el tipo y version de sistemas operativo de nuestra victima
 
 
 Si desea leer mas acerca de este herramienta e informacion que puede brindar acerca de un objetivo, puede visitar la siguiente pagina:
