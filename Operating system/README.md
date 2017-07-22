@@ -60,9 +60,9 @@ Dado a que por medio de UPnp se es posible modificar la apertura o cierro de los
 
 ¿Pero se es necesario estar incluido en la red local para hacer el ataque?
 
-La respuesta es NO, dado a que es  un protocolo que normalmente solo funciona dentro de una red local, lo que forzaria al atacante a infiltrase a la red local, para explotar las vulnerabilidades
+La respuesta es NO, se tiene previsto como un protocolo que normalmente  funciona dentro de una red local, lo que fuerza al atacante a infiltrase a la red local, para explotar las vulnerabilidades
 
-Pero ya hace muchot tiempo PDP mostró que era posible usar Flash para enviar peticiones UPnP desde dentro del navegador de un cliente a un router con UPnP habilitado y cambiar la configuración del firewall de este. 
+Pero ya hace mucho tiempo PDP mostró que era posible usar Flash para enviar peticiones UPnP desde dentro del navegador de un cliente a un router con UPnP habilitado y cambiar la configuración del firewall de este. 
 
 Dado que el archivo Flash puede ser embebido dentro de una página maliciosa, o inyectada dentro de una página confiable via XSS o SQL Injection, un atacante podría usar esto para remotamente alterar la configuración del router. 
 
