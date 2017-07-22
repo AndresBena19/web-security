@@ -56,7 +56,7 @@ Si preguntan ese link que se encuentra en medio de las peticiones a que sitio re
 
 # Otros riesgos #
 
-Dato a que por medio de UPnp si es posible modificar la apertura o cierro de los puertos en el router, es posible que un atancante, consiga hacer publico el panel de administracion del router o backdorizar el sistemas
+Dado a que por medio de UPnp se es posible modificar la apertura o cierro de los puertos en el router, es posible que un atancante, consiga redireccionar los puerto, lo que significaria un MITM o hacer publico el panel de administracion del router y porque no, backdorizar el sistema.
 
 ¿Pero se es necesario estar inclusido en la red local para hacer el ataque?
 
