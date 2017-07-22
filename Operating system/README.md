@@ -52,3 +52,18 @@ Como podemos ver aquellos dispositivos compatibles con UPnp se encuentran emitie
 Si preguntan ese link que se encuentra en medio de las peticiones a que sitio redirige, Es UPnP utilizando SOAP el cual usa XML para estructurar la información enviada entre las dos partes. Las peticiones SOAP son esencialmente peticiones HTTP POST con alguna cabecera SOAP adicional incluida en las cabeceras HTTP, la cual trae consigolas configuraciones y dispositivos soportados, esta informacion viaja junto a los paquetes msearch y notify con el que podremos obtener mucha mas informacion acerca de nuestro objetivo, pero por lo que esta face concierne, solo la utilizamos para intentar descubrir el tipo y version de sistemas operativo de nuestra victima
 
 "UPnP se encuentra activo en una vasta mayoría de redes caseras, e incluso también en algunas redes corporativas.Muchos dispositivos soportan UPnP en orden de facilitar el uso para los consumidores, sin embargo, a menudo soportan acciones que ningún servicio debería de estar posibilitado de ejecutar automáticamente, y especialmente sin ninguna autorización."
+
+
+# Otros riesgos #
+
+Dato a que por medio de UPnp si es posible modificar la apertura o cierro de los puertos en el router, es posible que un atancante, consiga hacer publico el panel de administracion del router o backdorizar el sistemas
+
+¿Pero se es necesario estar inclusido en la red local para hacer el ataque?
+
+La respuesta es NO, dado a que es  un protocolo que normalmente solo funciona dentro de una red local, lo que forzaria al atacante a infiltrase a la red local, para explotar las vulnerabilidades
+
+Pero ya hace muchot tiempo PDP mostró que era posible usar Flash para enviar peticiones UPnP desde dentro del navegador de un cliente a un router con UPnP habilitado y cambiar la configuración del firewall de este. 
+
+Dado que el archivo Flash puede ser embebido dentro de una página maliciosa, o inyectada dentro de una página confiable via XSS o SQL Injection, un atacante podría usar esto para remotamente alterar la configuración del router. 
+
+Aqui su pagina: http://www.gnucitizen.org/blog/hacking-the-interwebs
