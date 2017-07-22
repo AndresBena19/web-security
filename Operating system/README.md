@@ -1,10 +1,10 @@
-# Usando miranda #
+# Usando miranda para detectar S.0 #
 
 
 Miranda es una herramienta de administración de UPnP escrita en Python.
 
 
-# Que es UPnP ? #
+# Pero primero ¿Que es UPnP ? #
 
 UPnP (Universal Plug-N-Play) es un protocolo que permite que varios dispositivos de red se autoconfiguren por si mismos. 
 
