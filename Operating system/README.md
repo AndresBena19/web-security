@@ -45,7 +45,7 @@ Primero ejecutamos en nuestra shell, el comando miranda el cual nos brindara un 
   * Cuando es ejecutado el comando ‘pcap’, Miranda se pondrá en escucha (modo pasivo) buscando mensajes SSDP NOTIFY.
   * Cuando es ejecutado el comando ‘msearch’ consultará los dispositivos UPnP usando un mensaje M-SEARCH. Por defecto, ‘msearch’ buscará todos los dispositivos UPnP.
 
-![alt-text](img/kali.png)
+![alt-text](img/kali1.png)
 
 Como podemos ver aquellos dispositivos compatibles con UPnp se encuentran emitienco peticiones msearch o notify  y gracias a esto, tenemos un indicio del S.0 que utiliza
 se preguntaran ese link a que sitio redirigue, UPnp utiliza SOAP para el intercambio   y transmision de paquetes donde describre y especifica
