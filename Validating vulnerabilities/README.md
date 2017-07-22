@@ -43,7 +43,7 @@ Algunas veces solo queremos comprobar que nuestro target es vulnerable sin neces
  
  ¿  192.168.1.1 por que aparece en nuestro output ?
   
-  Ese es nuestro router comprobando que nuestro equipo se encuentre vivo, para continuar brindandonos serivico como DHCP, DNS entre otros
+  Ese es nuestro router comprobando que nuestro equipo se encuentre vivo, para continuar brindandonos servicios como DHCP, DNS entre otros
  
  por lo tanto con un par de pruebas y generando un patron simple lograremos identificar  cual es la IP perteneciente 
  a nuestro target
