@@ -51,5 +51,4 @@ Como podemos ver aquellos dispositivos compatibles con UPnp se encuentran emitie
 
 Si preguntan ese link que se encuentra en medio de las peticiones a que sitio redirige, Es UPnP utilizando SOAP el cual usa XML para estructurar la información enviada entre las dos partes. Las peticiones SOAP son esencialmente peticiones HTTP POST con alguna cabecera SOAP adicional incluida en las cabeceras HTTP, la cual trae consigolas configuraciones y dispositivos soportados, esta informacion viaja junto a los paquetes msearch y notify con el que podremos obtener mucha mas informacion acerca de nuestro objetivo, pero por lo que esta face concierne, solo la utilizamos para intentar descubrir el tipo y version de sistemas operativo de nuestra victima
 
-
-En otra oportunidad utilizaremos esat herramienta, para un spoofing de DNS o una redirrecion de puerto en el router, lo que implicaria un MITM.
+"UPnP se encuentra activo en una vasta mayoría de redes caseras, e incluso también en algunas redes corporativas.Muchos dispositivos soportan UPnP en orden de facilitar el uso para los consumidores, sin embargo, a menudo soportan acciones que ningún servicio debería de estar posibilitado de ejecutar automáticamente, y especialmente sin ninguna autorización."
