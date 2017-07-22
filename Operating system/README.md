@@ -11,8 +11,8 @@ UPnP (Universal Plug-N-Play) es un protocolo que permite que varios dispositivos
 En pocas palabras este protocolo es capaz de autoconfigurar los puertos de un dispositivo que soporte UPnP para evitar la tediosa tarea de abrir y cerrar puertos
 para la correcta utilizacion de un sofware
 
-Usualmente lo vemos en la consola de videojuegos, cuando intentamos conectar el chat de voz y video
-Sony por ejemplo utiliza  el puerto TCP 80, 443, 3478, 3479, 3480, 8080 y UDP  3478, 3479 entre otros
+Usualmente lo utilizamos en la consola de videojuegos, cuando intentamos conectar el chat de voz y video
+, Por ejemplo Sony por ejemplo utiliza  el puerto TCP 80, 443, 3478, 3479, 3480, 8080 y UDP  3478, 3479 entre otros
 
 
 Por lo tanto Sony nos recomiendo que si nuestro router soporta UPnp lo usemos, ya que este configurara automaticamente la apertura de estos puertos
