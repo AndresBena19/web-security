@@ -15,7 +15,7 @@ Usualmente lo utilizamos en la consola de videojuegos, cuando intentamos conecta
 Sony por ejemplo utiliza  el puerto TCP 80, 443, 3478, 3479, 3480, 8080 y UDP  3478, 3479 entre otros
 
 
-Por lo tanto Sony nos recomiendo que si nuestro router soporta UPnp lo usemos, ya que este configurara automaticamente la apertura de estos puertos
+Por lo tanto Sony nos recomienda que si nuestro router soporta UPnp lo usemos, ya que este configurara automaticamente la apertura de estos puertos
 
 
 # Funcionamient de UPnp #
