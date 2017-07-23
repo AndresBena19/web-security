@@ -15,12 +15,12 @@ Usualmente lo utilizamos en la consola de videojuegos, cuando intentamos conecta
 Sony por ejemplo utiliza  el puerto TCP 80, 443, 3478, 3479, 3480, 8080 y UDP  3478, 3479 entre otros
 
 
-Por lo tanto Sony nos recomienda que si nuestro router soporta UPnp lo usemos, ya que este configurara automaticamente la apertura de estos puertos
+Por lo tanto Sony nos recomienda que si nuestro router soporta UPnP lo usemos, ya que este configurara automaticamente la apertura de estos puertos
 
 
-# Funcionamient de UPnp #
+# Funcionamient de UPnP #
 
-Los router que soporta UPnp utilizan dirección multicast (multidifusión) 239.255.255.250 y el puerto TCP 1900 para comunicar a otros dispotivos que ofrece el servicio UPnp
+Los router que soporta UPnp utilizan dirección multicast (multidifusión) 239.255.255.250 y el puerto TCP 1900 para comunicar a otros dispotivos que ofrece el servicio UPnP
 esto lo hace mediante una peticion SSDP NOTIFIY, la cual se envia periodicamente y en caso de que un dispisitivo en la redes quisiera tomar el servicio enviaria una peticion SSDP RESPONDE
 
 ![alt-text](img/notify.png)
@@ -30,7 +30,7 @@ Tambien cuando nuestro dispositivo quiere encontrar a otro dispositivo que sopor
 ![alt-text](img/msearch.png)
 
 
-# ¿Como detecto el sistemas opetativo mediante UPnp? #
+# ¿Como detecto el sistemas opetativo mediante UPnP? #
 
 Dado a que nuestro sistemas emite estas comunicaciones automaticamente de forma multicast por el puerto 1900
 podemos interceptar estas peticiones y analizarlas, para eso usaremos miranda
