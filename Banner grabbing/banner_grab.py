@@ -20,7 +20,7 @@ for port in range(start,end):
     bangrab.connect((ip, port))
     ready = select.select([bangrab],[],[],1)
     #Usando el objeto select podremos determinar si en la respuesta se encuentra algo legible
-    #ya que existen servicios que se encuentran corriendo, pero no ofrecen un banner de conexion, como lo es el http en el puerto 80
+    #ya que existen servicios que se encuentran corriendo, pero no ofrecen un banner de conexion, como lo es el servicio http en el puerto 80
 
     #este objeto necesita de 4 argumentos, " a read list, a write list, an exception list, and an integer value"
     #en este caso solo nos interesa el  argumento de  lectura, los demas los dejamos vacios y el valor entero en 1, que  define el numero 
