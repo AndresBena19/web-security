@@ -24,18 +24,18 @@ while i <= max:
  try:
   payload = command + " " + (char * i)
   print "Sending " + str(i) + " instances of payload (" + char + ") to target"
-  s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-  connect=s.connect((target,port))
-  s.recv(1024)
-  s.send('USER ' + user + '\r\n')
-  s.recv(1024)
-  s.send('PASS ' + passwd + '\r\n')
-  s.recv(1024)
-  s.send(payload + '\r\n')
-  s.send('QUIT\r\n')
-  s.recv(1024)
-  s.close()
-  i = i + interval
+  s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)  #Nos conecatremos  por medio de IPV4 y por TCP
+  connect=s.connect((target,port)) #No conectamos  por medio del socket  a la ip "target" con puerto "port"
+  s.recv(1024)   #Recibimos la informacion 
+  s.send('USER ' + user + '\r\n')  #se envia el usuario para autenticacion
+  s.recv(1024) #Recibimos la informacion
+  s.send('PASS ' + passwd + '\r\n') #se envia el usuario para autenticacion
+  s.recv(1024) #Recibimos la informacion
+  s.send(payload + '\r\n') #Hacemos el fuzz sobre el comando ingresaso  
+  s.send('QUIT\r\n')  #Salimos de servicio
+  s.recv(1024) #Recibimos la informacion
+  s.close() #Cerramos el socket
+  i = i + interval #aumentemos la cantidad de veces con la que se multiplicara nuestro valor char 
  except:
   print "\nUnable to send...Server may have crashed"
   sys.exit()
