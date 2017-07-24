@@ -10,7 +10,7 @@ import sys
 
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 
-parser = argparse.ArgumentParser(description="Script para detectar el OS de un sistema")
+parser = argparse.ArgumentParser(description="Script para hacer ataque Dos con ICMP")
 parser.add_argument('-P', '--IP_USER',metavar="IPUSER", help="IP de la victima", required=True, dest='USER')
 parser.add_argument('-n', '--ITERATIONS', metavar="ITERATIONS", help="Numero de paquetes", required=True,dest='NUMBER')
 
