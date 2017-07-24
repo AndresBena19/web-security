@@ -1,8 +1,4 @@
-# NOTA #
+# DISCLAIMER #
 
-Muchos  de los scripts aqui mostrados son una repolacion practica dela teoria mostrada en el libro:
 
-  * kali linux network scanning cookbook
-
-Todo lo aqui mostrado  lo hago con fines educativos y con el objetivo de recopilar y hacer entendible gran parte del contenido de este libro,
-ya que  se encuentra en ingles y se hace necesario  tener algunos conocimientos sobre el protocolo TCP/IP
+Todo lo aqui mostrado  se hace con fines educativo no me hago responsable por el uso indebido de la información contenida en este repositorio.
