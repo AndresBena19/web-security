@@ -14,7 +14,7 @@
    Cuanto mayor sea el tamaño en bytes de la respuesta, más exito el ataque será.
    
    
-   # Protocolo UDP #
+ # Protocolo UDP #
    
    El protcolo UDP no es un protocolo orientado a la conexion, aqui nace el primer problema
    
@@ -27,7 +27,8 @@
    rediriguir trafico a una maquina especifica.
    
    
-   # ftp_fuzzy.py #
+ # ftp_fuzzy.py #
+   
    En general, los desbordamientos de búfer son capaces de causar una denegación de servicio, porque
    Pueden dar lugar a que se carguen datos arbitrarios en segmentos de memoria no deseados. Esta
    Puede interrumpir el flujo de ejecución y resultar en un bloqueo del servicio o del sistema operativo.
@@ -36,18 +37,18 @@
    cabe destacar que la conexion al ftp,  en este es script se hace de forma remota con ayuda de la libreria socket
    
    
-    # Dos_icmp.py #
+ # Dos_icmp.py #
     
-    Cuando hacemos un ping hacia una maquina, lo que en realidad sucede, es que enviamos una solicitud *echo request*, por lo tanto 
-    si la maquina objetivo se encuentra activa, y libre de algun firewall, deberia responde con un *echo reply*
-    
-    
-    ![alt-text](img/icmp.png) 
+  Cuando hacemos un ping hacia una maquina, lo que en realidad sucede, es que enviamos una solicitud echo request, por lo tanto 
+  si la maquina objetivo se encuentra activa, y libre de algun firewall, deberia responde con un echo reply
     
     
-    Ddos con respuestas tipo echo reply
+  ![alt-text](img/icmp.png) 
     
-    ![alt-text](img/icmp2.png) 
+    
+  Ddos con respuestas tipo echo reply
+    
+  ![alt-text](img/icmp2.png) 
     
   
    
