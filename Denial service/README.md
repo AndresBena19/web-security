@@ -49,6 +49,35 @@
   **Ddos con respuestas tipo echo reply**
     
   ![alt-text](img/icmp2.png) 
+  
+  
+  
+ # Dos_dns.py #
+ 
+ La denegacion de servicio por medio de peticiones al servidor DNS, cumple con las dos condicione necesarias para que el ataque se lleve   a cabo.
+ 
+  * Primero, trabaja con el protocolo UDP, por lo tanto podremos spoofear la ip de origen
+  * Segunfo, la respuesta en bytes es mucho mas grande, que la peticiones realizada
+  
+  La peticion para averiguar los diferentes registro DNS asociados a un dominio o IP, suelen responder con registros de direccion,         registro de dirección IPv6,Registro de servidor de nombres, registros de punteros entre otros.
+  
+  Lo que reprentaria en bytes un tamaño mayor a la solicitud enviada, si logramos redireccionar esa respuesta a un equipo especifico y     ademas lo hacemos indefinidamente, es muy probable que el sistema sufra fallos, a causa del trafico entrante
+  
+  
+    ![alt-text](img/dns1.png)
+  
+   **Ddos con respuestas DNSRR**
+   
+    ![alt-text](img/dnsa.png)
+  
+  
+  
+  
+  
+  
+   
+ 
+ 
     
   
    
