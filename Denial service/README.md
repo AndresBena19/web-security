@@ -64,7 +64,7 @@
   Lo que reprentaria en bytes un tamaño mayor a la solicitud enviada, si logramos redireccionar esa respuesta a un equipo especifico y     ademas lo hacemos indefinidamente, es muy probable que el sistema sufra fallos, a causa del trafico entrante
   
   
-    ![alt-text](img/dns1.png)
+    ![alt-text](img/dns2.png)
   
    **Ddos con respuestas DNSRR**
    
