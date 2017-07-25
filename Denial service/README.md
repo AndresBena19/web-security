@@ -46,7 +46,7 @@
   ![alt-text](img/icmp.png) 
     
     
-  Ddos con respuestas tipo echo reply
+  **Ddos con respuestas tipo echo reply**
     
   ![alt-text](img/icmp2.png) 
     
