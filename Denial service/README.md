@@ -97,9 +97,9 @@
 
   Al ejecutar este script, es posible ejecutar el comando, 
 
-   ```
-    netstat -noa & grep ESTABLISHED 
-   ```
+  ```
+   netstat -noa & grep ESTABLISHED 
+  ```
 
   Asi podremos confirmar, que  hemos establecido una conexion con el target, de igual forma sucede si lo ejecutamos en el target
  
@@ -110,14 +110,15 @@
  
   En nuestro caso, lo hicieron pero con ayuda de scapy, por lo tanto al bloquear las respuestas RST de nuestra maquina, podremos           responder con el paquete ACK y establecer la conexion.
  
+ 
   ![alt-text](img/SOCKET.png)
   
   
   Con ayuda del comando:
   
-    ```
-     free -m
-    ```
+   ```
+   free -m
+   ```
   
   Podremos ver el estado de la memoria, en la cual podremos ver luego de iniciado el ataque, como varian los recursos, al momento que     los recursos ya no pueda soportar el trafico esta empezara a fallar.
   
