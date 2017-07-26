@@ -83,7 +83,7 @@
   
   Los servicios que corren en TCP solo permiten un cantidad limitada de half-open o medio abiertas, por lo tanto despues  de haber         superado este limite, el servidor ya no podra recibir nuevas conexiones 
   
- ![alt-text](img/syn.png)
+ ![alt-text](img/syn(1).png)
   
   
   
