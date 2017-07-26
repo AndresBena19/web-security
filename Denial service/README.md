@@ -110,16 +110,16 @@
  
   En nuestro caso, lo hicieron pero con ayuda de scapy, por lo tanto al bloquear las respuestas RST de nuestra maquina, podremos           responder con el paquete ACK y establecer la conexion.
  
- ![alt-text](img/SOCKET.png)
+  ![alt-text](img/SOCKET.png)
   
   
-  Con ayuda del comando:
+   Con ayuda del comando:
   
-  ```
-  free -m
-  ```
+   ```
+    free -m
+   ```
   
-  Podremos ver el estado de la memoria, en la cual podremos ver luego de iniciado el ataque, como varian los recursos, al momento que     los recursos ya no pueda soportar el trafico esta empezara a fallar.
+    Podremos ver el estado de la memoria, en la cual podremos ver luego de iniciado el ataque, como varian los recursos, al momento que     los recursos ya no pueda soportar el trafico esta empezara a fallar.
   
   
   
