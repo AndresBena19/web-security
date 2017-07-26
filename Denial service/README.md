@@ -84,8 +84,42 @@
   Los servicios que corren en TCP solo permiten un cantidad limitada de half-open o medio abiertas, por lo tanto despues  de haber         superado este limite, el servidor ya no podra recibir nuevas conexiones 
   
  ![alt-text](img/syn.png)
+ 
+ 
+ 
+ # SOCKET_stress.py #
+ 
+Este tipo de denegacion de servicio es similar  a la inundacion de paquetes de sincronizacon SYN, pero a diferencia de ese, en este   tipo de ataque, completaremos con la trama final ACK, y podemos generar un estado de conexion ESTABLISHED.
+ 
+El punto critico de este ataque, cuando enviamos e paquete ACK de confirmacion, enviamos el parametro windows=0 por lo tanto los        servicios vulnerables no transmitirán ningún dato en respuesta a la conexión, Debido a la indicación de cualquier ventana vacía por     parte del cliente de conexión.
+ 
+En lugar, el servidor mantendrá los datos a transmitir en la memoria. Inundando un servidor con estos, las conexiones established agotarán los recursos del servidor, entre estos la memoria, el espacio de intercambio,Y potencia de procesamiento.
+
+Al ejecutar este script, es posible ejecutar el comando, 
+
+```
+netstat -noa & grep ESTABLISHED 
+```
+
+ Asi podremos confirmar, que  hemos establecido una conexion con el target, de igual forma sucede si lo ejecutamos en el target
+ 
+ para poder llevar a cabo este ataque utilizando al libreria scapy, es necesario desactivar en el sistema, las respuestas tipo RST, 
+ ya que al enviar el paquete SYN,  y nuestra target responda con SYN/ACk, nuestro sistema respondera con un paquete RST/ACK
+ 
+ Esto se debe a la naturaleza de el protocolo TCP, si una maquina envia un paquete ACK a otra, esta respondera con RST, ya que en ningun   momento ella, como sistema, envio un paquete de sincronizacion.
+ 
+ En nuestro caso, lo hicieron pero con ayuda de scapy, por lo tanto al bloquear las respuestas RST de nuestra maquina, podremos  responder con el paquete ACK y establecer la conexion.
+ 
+  ![alt-text](img/syn.png)
   
   
+  Con ayuda del comando:
+  
+  ```
+  free -m
+  ```
+  
+Podremos ver el estado de la memoria, en la cual podremos ver luego de iniciado el ataque, como varian los recursos, al momento que  los recursos ya no pueda soportar el trafico esta empezara a fallar.
   
   
   
