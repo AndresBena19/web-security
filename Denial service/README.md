@@ -22,7 +22,8 @@
   
   "UDP no otorga garantías para la entrega de sus mensajes (por lo que realmente no se debería encontrar en la capa 4)"
    
-   Por lo tan to UDP, no necesita establecer un conexion a priori para el intercambio de paquetes, por ende, este no sanitiza  ni          comprueba el origen y confiabilidad del emisor, lo que lo hace totalmente vulnerable a suplantacion de identidad.
+   Por lo tan to UDP, no necesita establecer un conexion a priori para el intercambio de paquetes, por ende, este no 
+   sanitiza  ni comprueba el origen y confiabilidad del emisor, lo que lo hace totalmente vulnerable a suplantacion de identidad.
    
    gracias  a lo anterior es posible realizar los siguiente ataques, que resultaran en una denegacion de servicio, siendo capaz de       
    rediriguir trafico a una maquina especifica.
@@ -36,8 +37,7 @@
    
    ftp_fuzzy.py solo intenta encontrar un desbordamiento de buffer en algun comando usado en consola, ingresando un payload,
    cabe destacar que la conexion al ftp,  en este es script se hace de forma remota con ayuda de la libreria socket.
-   
-      
+ 
   ![alt-text](img/ftp.png) 
    
    
