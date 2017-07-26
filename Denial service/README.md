@@ -113,13 +113,13 @@
   ![alt-text](img/SOCKET.png)
   
   
-   Con ayuda del comando:
+  Con ayuda del comando:
   
-   ```
-    free -m
-   ```
+    ```
+     free -m
+    ```
   
-    Podremos ver el estado de la memoria, en la cual podremos ver luego de iniciado el ataque, como varian los recursos, al momento que     los recursos ya no pueda soportar el trafico esta empezara a fallar.
+  Podremos ver el estado de la memoria, en la cual podremos ver luego de iniciado el ataque, como varian los recursos, al momento que     los recursos ya no pueda soportar el trafico esta empezara a fallar.
   
   
   
