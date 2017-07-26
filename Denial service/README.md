@@ -34,8 +34,11 @@
    Pueden dar lugar a que se carguen datos arbitrarios en segmentos de memoria no deseados. Esta
    Puede interrumpir el flujo de ejecución y resultar en un bloqueo del servicio o del sistema operativo.
    
-   ftp_fuzzy.py solo intenta encontrar un desbordamiento de buffer en algun comando usado en consola, ingresando un payload
-   cabe destacar que la conexion al ftp,  en este es script se hace de forma remota con ayuda de la libreria socket
+   ftp_fuzzy.py solo intenta encontrar un desbordamiento de buffer en algun comando usado en consola, ingresando un payload,
+   cabe destacar que la conexion al ftp,  en este es script se hace de forma remota con ayuda de la libreria socket.
+   
+      
+  ![alt-text](img/ftp.png) 
    
    
  # Dos_icmp.py #
