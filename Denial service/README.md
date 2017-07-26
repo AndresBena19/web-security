@@ -18,8 +18,8 @@
    
    El protcolo UDP no es un protocolo orientado a la conexion, aqui nace el primer problema
    
-  *"Toda implementación TCP/IP que no se use exclusivamente para ruteo incluye UDP"
-  *"UDP no otorga garantías para la entrega de sus mensajes (por lo que realmente no se debería encontrar en la capa 4)"
+  "Toda implementación TCP/IP que no se use exclusivamente para ruteo incluye UDP"
+  "UDP no otorga garantías para la entrega de sus mensajes (por lo que realmente no se debería encontrar en la capa 4)"
    
    Por lo tan to UDP, no necesita establecer un conexion a priori para el intercambio de paquetes, por ende, este no sanitiza  ni          comprueba el origen y confiabilidad del emisor, lo que lo hace totalmente vulnerable a suplantacion de identidad.
    
