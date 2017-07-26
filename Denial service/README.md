@@ -79,7 +79,7 @@
   
   ¿Por que el 80?
   
-  Porque usualmente aqui encontramos corriendo los servicios de apache y si nuestro ataque es exitoso, entonces denegaremos su servicio
+  Porque usualmente aqui encontramos corriendo el servicio de apache y si nuestro ataque es exitoso, entonces denegaremos su servicio
   
   Los servicios que corren en TCP solo permiten un cantidad limitada de half-open o medio abiertas, por lo tanto despues  de haber         superado este limite, el servidor ya no podra recibir nuevas conexiones 
   
