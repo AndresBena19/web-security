@@ -124,9 +124,21 @@
   
   
   
+  # Dos_snmp.py #
+  
+   La denegacion de servicio por medio de peticiones al servidor DNS, cumple con las dos condicione necesarias para que el ataque se        lleve   a cabo.
+ 
+  * Primero, trabaja con el protocolo UDP, por lo tanto podremos spoofear la ip de origen
+  * Segunfo, la respuesta en bytes es mucho mas grande, que la peticiones realizada
   
   
+   **Ejecucion normal**
    
+   ![alt-text](img/snmp.png)
+   
+   **Denegando servico con respuestas snmp**
+  
+   ![alt-text](img/snmp1.png)
  
  
     
