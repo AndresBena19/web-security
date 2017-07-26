@@ -110,7 +110,7 @@
  
   En nuestro caso, lo hicieron pero con ayuda de scapy, por lo tanto al bloquear las respuestas RST de nuestra maquina, podremos           responder con el paquete ACK y establecer la conexion.
  
-  ![alt-text](img/syn.png)
+  ![alt-text](img/SOCKET.png)
   
   
   Con ayuda del comando:
