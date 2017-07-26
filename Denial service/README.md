@@ -131,7 +131,6 @@
   * Primero, trabaja con el protocolo UDP, por lo tanto podremos spoofear la ip de origen
   * Segunfo, la respuesta en bytes es mucho mas grande, que la peticiones realizada
   
-  
    **Ejecucion normal**
    
    ![alt-text](img/snmp.png)
