@@ -136,7 +136,7 @@
   
    **Ejecucion normal**
    
-   ![alt-text](img/snmp.png)
+   ![alt-text](img/snmp2.png)
    
    **Denegando servico con respuestas snmp**
   
