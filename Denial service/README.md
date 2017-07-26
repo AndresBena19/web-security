@@ -71,6 +71,22 @@
   ![alt-text](img/dnsa.png)
   
   
+  # Dos_syn.py #
+  
+  Este tipo de denegacion de servicio aprovecha la posibilidad de crear una conexion a un puerto TCP, realizando a medias el 3 way         handshake, lo interesante sucede cuando enviamos la solicitud de conexion SYN y nuestro target responde con SYN/ACK, en este punto       nuestro objetivo revela que esta dispuesto a establecer una conexion con nosotros.
+  
+  Gracias a esto ya podemos generar una inundacion de paquetes SYN, donde la IP de origen sera la nuestra y nuestro puerto un valor       random entre 0 y 65535, la direccion IP de destino, sera la de nuestro target  y su puerto el 80
+  
+  ¿Por que el 80?
+  
+  Porque usualmente aqui encontramos corriendo los servicios de apache y si nuestro ataque es exitoso, entonces denegaremos su servicio
+  
+  Los servicios que corren en TCP solo permiten un cantidad limitada de half-open o medio abiertas, por lo tanto despues  de haber         superado este limite, el servidor ya no podra recibir nuevas conexiones 
+  
+    ![alt-text](img/syn.png)
+  
+  
+  
   
   
   
