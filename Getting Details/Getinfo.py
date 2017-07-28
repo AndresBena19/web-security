@@ -1,12 +1,9 @@
 #!/usr/bin/python
 import os
 import socket
-import shutil
-import errno
 if os.name != "nt":
     import fcntl
 import struct
-import uuid
 import argparse
 
 def IP(inter):
