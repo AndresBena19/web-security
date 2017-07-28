@@ -28,10 +28,18 @@ if __name__=="__main__":
 
  I = IP(args.INT)
  M = MAC(args.INT)
+  
+ hostname = "None"
 
-
-
-print "The  interfaz " + args.INT +" have a IP:"+ I +" And MAC:" + M  
+ hostname = socket.gethostbyname(socket.gethostname())
+ if hostname.startswith("127.") and os.name != "nt":
+   hostdata = socket.gethostbyaddr(socket.gethostname())
+   hostname = str(hostdata[1]).strip('[]')
+ else:
+   hostdata = socket.gethostbyaddr(socket.gethostname())
+   hostname = str(socket.gethostname())
+ 
+ print "The  interfaz " + args.INT +" have a IP:"+ I +" And MAC:" + M +" and the hostname is:"+ hostname 
 
 
 
