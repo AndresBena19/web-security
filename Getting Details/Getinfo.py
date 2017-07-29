@@ -6,6 +6,8 @@ if os.name != "nt":
 import struct
 import argparse
 
+
+
 def IP(inter):
  s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
  IP_ADDRESS = socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0x8915,
