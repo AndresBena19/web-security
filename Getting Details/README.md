@@ -1,1 +1,1 @@
-![alt-text](img/DESH.png)
+![alt-text](img/DES.png)
