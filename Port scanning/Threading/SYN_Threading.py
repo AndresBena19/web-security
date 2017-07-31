@@ -32,11 +32,8 @@ class myThread (threading.Thread):
   SYN(self.st,self.en)
 
 
-
-
 if __name__ == "__main__":
-
-
+ 
  t1= datetime.now()
  dic = collections.OrderedDict()
  parser = argparse.ArgumentParser(description="Escaneo tipo SYN con threading")
@@ -46,8 +43,6 @@ if __name__ == "__main__":
 
  args = parser.parse_args()
 
- ''' Section 4 '''
-
  total_ip = (int(args.END)) - (int(args.ST))
  print  total_ip 
  tn =20 # number of ip handled by one thread
@@ -55,9 +50,12 @@ if __name__ == "__main__":
  print total_thread
  total_thread=total_thread+1
  print total_thread
+ 
  start  = int(args.ST) 
  end =  int(args.END) 
+ 
  threads= []
+ 
  try:
   for i in xrange(total_thread):
    en = start + tn
@@ -68,16 +66,21 @@ if __name__ == "__main__":
    thread.start()
    threads.append(thread) 
    start  = en
+   
  except:
    print "Error: unable to start thread"
  
  print "\tNumber of Threads active:", threading.activeCount()
+ 
  for t in threads:
   t.join()
+  
  print "Exiting Main Thread"
  dict = collections.OrderedDict(sorted(dic.items()))
+ 
  for key in dict:
   print dict[key],"-->" "Live"
  t2= datetime.now()
+ 
  total =t2-t1
  print "scanning complete in " , total
