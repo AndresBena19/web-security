@@ -29,44 +29,34 @@ def delay(aif,sif,a):
 
 if __name__ == "__main__":
 
- di = []
+ di = [0]
  ai = [0,1,1,1,1,2,2,3,3,3,4,5,5,6,6,7,8,8,8,8]
  si = [4,3,3,3,5,3,5,3,4,5,2,3,4,1,4,4,1,2,4,5]
- bi = []
 
  di = delay(ai,si,20)
  
+ x=1;
  Ssi=0.0;
-
- for x in range(0, len(si)):
+ for x in range(20):
    Ssi=Ssi+si[x]
-
-
  Stsi=Ssi/20
 
  Sai=0.0;
-
- for x in range (20):
+ for x in range (1, 20):
    Sai=Sai+ai[x] 
-
  Stai=Sai/20
 
  subprocess.call(['clear', ''])
 
- for x in range(20):
-   bi.insert(x , ai[x]+di[x])
+ 
 
  print "********************************************"
  print "Arrival time /  Service time  / Delay time  / Service begin"
  for x in range(20):
-  print "a"+ str(x) +":"  + str(ai[x]) + "       ->    b" + str(x) +":"  + str(bi[x]) + "   ->   d"+ str(x) +":"  + str(di[x]) + "   ->   s"+ str(x) +":"  + str(si[x])
+  print "a"+ str(x+1) +":"  + str(ai[x]) + "       ->    s" + str(x+1) +":"  + str(si[x]) + "   ->   di"+ str(x+1) +":"  + str(di[x])
 
  print "********************************************"
 
- print "Statistics of service time = " + str(Stsi)
- print "Statistics of arrival time = " + str(Stai)
-
-
- 
-
+ print "Statistics of service time = " + str(Stsi) + " customer per unit time"
+ print "Statistics of arrival time = " + str(Stai) + " customer per unit time"
 
