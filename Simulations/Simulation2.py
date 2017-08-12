@@ -59,7 +59,7 @@ if __name__ == "__main__":
  print "********************************************"
  print "Arrival time /  Service time  / Delay time  / Service begin"
  for x in range(20):
-  print "a"+ str(x) +":"  + str(ai[x]) + "       ->    b" + str(x) +":"  + str(bi[x]) + "   ->   d"+ str(x) +":"  + str(di[x]) + "   ->   s"+ str(x) +":"  + str(si[x])
+  print "a"+ str(x+1) +":"  + str(ai[x]) + "       ->    b" + str(x+1) +":"  + str(bi[x]) + "   ->   d"+ str(x+1) +":"  + str(di[x]) + "   ->   s"+ str(x+1) +":"  + str(si[x])
 
  print "********************************************"
 
