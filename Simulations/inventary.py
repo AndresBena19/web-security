@@ -113,4 +113,5 @@ if __name__ == "__main__":
  print "average holding cost:"+ str(int(C)) + " per week"
  print "average shortage cost:" +str(int(D)) + " per week"
  print " "
- print "Average dependent cost:" + str(int(A+B+C+D)) 
+ print "Average operating cost:" + str(int(A+B+C+D))
+ print "Average dependent cost:" + str(int(B+C+D)) 
