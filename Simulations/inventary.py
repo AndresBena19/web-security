@@ -74,7 +74,7 @@ if __name__ == "__main__":
  print "************************************************************"
  print "d = o = " + str(int(Acum)) + "/100 = " + str(SO[0])+ " items per time interval"
  print "************************************************************"
- print "Average of sorted items (Li) = " + str(SL[0])
+ print "Average of inventory level (Li) = " + str(SL[0])
  print "************************************************************"
  print "Operating cost"
  print " "
@@ -109,7 +109,7 @@ if __name__ == "__main__":
  D= 3000*SLmenos[0]
  print "***----****----****----*****----******----****---*****"
  print "item cost:"+ str(int(A)) + " per week"
- print "setup cost:"+ str(int(B)) + " per week"
+ print "setup cost:"+ str(int(B)) 
  print "holding cost:"+ str(int(C)) + " per week"
  print "shortage cost:" +str(int(D)) + " per week"
  print " "
