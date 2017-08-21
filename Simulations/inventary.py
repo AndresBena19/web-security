@@ -84,7 +84,7 @@ if __name__ == "__main__":
     if(Oi[x]>0):
      U=U+1 
  Up=U/100
- print "Average setup cost  (u) :" + str(Up)
+ print "Average order frequency  (u) :" + str(Up)
 
  p=0
  while(p!=100):
