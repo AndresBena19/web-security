@@ -108,9 +108,9 @@ if __name__ == "__main__":
  C= 500*SLmas[0]
  D= 3000*SLmenos[0]
  print "***----****----****----*****----******----****---*****"
- print "item cost:"+ str(int(A)) + " per week"
- print "setup cost:"+ str(int(B)) 
- print "holding cost:"+ str(int(C)) + " per week"
- print "shortage cost:" +str(int(D)) + " per week"
+ print "average item cost:"+ str(int(A)) + " per week"
+ print "average setup cost:"+ str(int(B)) 
+ print "average holding cost:"+ str(int(C)) + " per week"
+ print "average shortage cost:" +str(int(D)) + " per week"
  print " "
  print "Average dependent cost:" + str(int(A+B+C+D)) 
