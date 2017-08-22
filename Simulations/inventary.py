@@ -70,7 +70,7 @@ if __name__ == "__main__":
  SL =Promedio(Li,100)
 
  print "Average Demand (d)= " + str(St)
- print "Average of sorted items (o ) = " + str(SO[0])
+ print "Average order (o ) = " + str(SO[0])
  print "************************************************************"
  print "d = o = " + str(int(Acum)) + "/100 = " + str(SO[0])+ " items per time interval"
  print "************************************************************"
