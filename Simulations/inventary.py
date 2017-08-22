@@ -100,7 +100,7 @@ if __name__ == "__main__":
  SLmenos = Promedio(Lmenos,100)
  print "Average holding level (L+) :" +  str(SLmas[0])
  print "Average shortage level (L-) :" + str(SLmenos[0])
- print "Time-average inventory(L) :" + str(SLmas[0]-SLmenos[0]) 
+ print "Time-average inventory(L) :" + str((SLmas[0]-SLmenos[0])/100) 
 
 
  A= 5000*SO[0]
