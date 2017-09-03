@@ -2,7 +2,7 @@
 import fractions 
 def FullP(a):
   cont=0 
-  m=32749
+  m=2147483648
   i=1
   x=a
   while(x!=1):
@@ -17,5 +17,5 @@ def FullP(a):
   return cont
 if __name__ == "__main__":
 
-  a=FullP(3)
+  a=FullP(7)
   print "El numero de full periods es:",a
