@@ -3,8 +3,6 @@ import subprocess
 import numpy as np
 import math
 
-
-
 def delay(aif,sif,a):
  i=0
  di=[]
@@ -24,8 +22,6 @@ def delay(aif,sif,a):
       ci.insert(i , ai+di[i]+si)
       i = i+1
  return di
-
-
 
 
 def ClientesOut(aif,sif,dif,tif,a):
@@ -176,28 +172,21 @@ if __name__ == "__main__":
    b = ((len(siI)+1)*Mx)/(len(siI)-1)
    si= np.random.uniform(0,b,50)
 
-
    for g in range(50):
      ai[g]=round(ai[g])
      si[g]=round(si[g])
      ti[g]=round(ti[g])
 
-
-
    bool=True
    ai,si,ti = organize(ai,si,ti,bool)
    cont,contout=Fifo(ai,si,bi,di,50)
-
 
    bool=False
    ai,si,ti = organize(ai,si,ti,bool)
    cont1, contout1=Lifo(ai,si,bi,di,50)
 
-
    acumFifo=acumFifo+contout
    acumLifo=acumLifo+contout1
-
-
 
  print  "++++++++++++++++++++++++++++++++++++"
  print  "Promedio de desertores en FIFO:"+ str(acumFifo/100)
