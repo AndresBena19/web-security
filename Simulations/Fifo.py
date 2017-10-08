@@ -109,43 +109,34 @@ def Lifo(ai,si,bi,di,a):
 
 
 def Fifo(ai,si,bi,di,a):
+ #llamamos ala funcion para calcular el delay de cada proceso
  di = delay(ai,si,50)
+ #Calculamos el promedio de tiempo de servicio
  Ssi=0.0
- 
  for x in range(0, len(si)):
    Ssi=Ssi+si[x]
 
  Stsi=Ssi/50
+ 
+ 
+ #Calculamos el promedio de tiempo de llegada
  Sai=0.0
 
  for x in range (50):
    Sai=Sai+ai[x]
 
  Stai=Sai/50
-
+#Imprimimos en pantalla
  for x in range(50):
    bi.insert(x , ai[x]+di[x])
 
 
  print " Sistema de cola FIFO "
  print "********************************************"
- 
- """print "Arrival time /  Service begin  / Delay time  / Service time / Tolerance"
- for x in range(50):
-  if(ti[x]<di[x]): 
-     state="Desertor"
-  else:
-     state=""
-
-
-  print "a"+ str(x+1) +":"  + str(ai[x]) + "       ->    b" + str(x+1) +":"  + str(bi[x]) + "   ->   d"+ str(x+1) +":"  + str(di[x]) + "   ->   s"+ str(x+1)  +":"  + str(si[x]) + "    ->  t" + str(x+1)+":" + str(ti[x]) + "  " + state
-
-
- print ("********************************************")
- """
  print "Statistics of service time = " + str(Stsi)
  print "Statistics of arrival time = " + str(Stai)
 
+ #Capturamos los valores de procesom desertores y no desertores
  cont, contout= ClientesOut(ai,si,di,ti,50)
  return cont, contout
 
