@@ -2,7 +2,7 @@
 
 * Nuestro primer objetivo es encontrar un host con un ID incremental, el cual es un valor de el paquete IP
  
-* Nuestro segundo ojetivo es comparar este valor respeto a un antes y despues del scaneo
+* Nuestro segundo ojetivo es comparar este valor respeto a un antes y despues del scaneo, ya que este valor en el caso de haber  sido existoso el escaneo, debio haber cambiado
 
 # Puerto abierto #
 
