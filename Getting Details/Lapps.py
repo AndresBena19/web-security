@@ -70,7 +70,7 @@ except ImportError:
     print ("[!] You don't have netifaces library installed")
     rp = raw_input('Do you want to install netifaces library (S/N)')
     if(rp=="S" or rp=="s"):
-        subprocess.call(['pip install netifaces'], shell=True)
+        subprocess.Popen(['pip',  'install', 'netifaces'], shell=True)
 try:
     import unicodedata
 except ImportError:
@@ -173,6 +173,7 @@ def save_installed_apps(app):
  path = socket.gethostname() + '/Apps.txt'
  with open(path,'a+') as f:
         f.write(app)
+ 
 
 
 
@@ -196,11 +197,14 @@ def Services():
 
 #Usign nmap we scan the ips on our diferents interfeaces
 def scan(key, start, end):
+    
     scanner = nmap.PortScanner()
     #We gonna scan all the known port for all the ip found on the host
     for port in range(start, end):
         temp = scanner.scan(key, str(port))
         temp2 = temp['scan']
+        print key, port
+        
         #We insure that the dictionaris is not empty
         if(len(temp2)>0):
             temp3 = temp2[key]
@@ -208,10 +212,12 @@ def scan(key, start, end):
             temp5 = temp4[port]
             #we insure that the key in te result dictionari is not empty
             if(temp5['product']!=''):
+                
                 #concatenate the significant information
-                id_Service = temp5['product'] + " " + temp5['version']  + "\n"
+                id_Service = temp5['product'] + " " + temp5['version']  + "............ " + key +" "+ str(port) + "\n"
                 #We just save valid information :v
                 path = socket.gethostname() + "/services.txt"
+                print id_Service
                 with open(path, "a") as archivo:
                             archivo.write(id_Service)
 
@@ -238,15 +244,15 @@ def Detect_Services():
     #We gonna march all the key of the dictinary using threads
     for key in ip:
         #We select 1024 becouse is the range of the known port's
-        total_ip = 300
+        total_ip = 1
         # number of ip handled by one thread
-        tn = 20
+        tn = 4
         total_thread = total_ip/tn
         total_thread=total_thread+1
 
         #The  number of port that we gonna analize
-        start  = 1
-        end =  100
+        start  = 137
+        end =  140
 
         threads= []
         #We gonna try to find the exception for the future
@@ -301,6 +307,8 @@ if __name__ == '__main__':
             print "[*] Starting the application analysis on " + Detect_Os()
             #we begin detection the application's install in the host
             apps_installed()
+            print "[+] the application analysis finished"
+            print "[+] find the file here " + socket.gethostname() + '/Apps.txt' + "\n"
             print "[*] Starting the service analysis on " + Detect_Os()
             #We began to detect de services tha is running
             Detect_Services()
