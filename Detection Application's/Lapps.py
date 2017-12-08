@@ -52,6 +52,7 @@ import unicodedata
 import threading
 from nmap import *
 import socket
+import time
 ##########################################################
 
 
@@ -92,8 +93,6 @@ def Get_apps():
         print "[+] the application analysis finished"
         print "[+] find the file here " + pathA + "\n"
 
-
-
     else:
         if(Host_info.find("fedora")!= -1 ):
             subprocess.call(['rmp', '-qa'])
@@ -123,8 +122,6 @@ def save_installed_apps(app):
  path = socket.gethostname() + '/Apps.txt'
  with open(path ,'a+') as f:
         f.write(app)
-
-
 
 
 #Detecting the os tha is running on the host
@@ -196,7 +193,7 @@ def scan(key, start, end):
     for port in temp:
         temp = scanner.scan(key, str(port))
         temp2 = temp['scan']
-        print key , port
+        print "."
 
 
         #We insure that the dictionaris is not empty
@@ -211,12 +208,8 @@ def scan(key, start, end):
                 id_Service =  temp5['name'] + "-->" + temp5['product'] + " " + temp5['version']  + "............ " + key +":"+ str(port) + "\n"
                 #We just save valid information :v
                 path = socket.gethostname() + "/services.txt"
-                print id_Service
                 with open(path, "a+") as archivo:
                             archivo.write(id_Service)
-
-
-
 
 
 #This class use his method run, to call Services with a specific range of port
@@ -237,7 +230,7 @@ def Detect_Services():
     ip = Services()
     #We gonna march all the key of the dictinary using threads
     for key in ip:
-        #We select 1024 becouse is the range of the known port's
+        #We select 1108 becouse is the range of the known port's
         total_ip = 1108-0
         # number of ip handled by one thread
         tn = 20
@@ -278,10 +271,7 @@ def Detect_Services():
          t.join()
 
 
-
-
 if __name__ == '__main__':
-
 
     #Gettin the hostname of the host
     hostname = socket.gethostname()
@@ -290,27 +280,37 @@ if __name__ == '__main__':
     if(Detect_Os()== 'Linux'):
         #Create de directory where the information gonna save_installed_apps
         subprocess.Popen(['mkdir', hostname]) #On linux run well
-        print "[*] Starting the application analysis on " + Detect_Os()
+        '''
+        In some cases, the command mkdir, don't excute fast in the system and when the fuction scan, want to
+        create a path on that directory, this does not exist yet 
+        '''
+        time.sleep( 3 )
+        print "[*] Starting the application analysis on {}".format(Detect_Os())
         #Checking installed packets
         check_execs('dpkg')
-        print "[*] Starting the service analysis on " + Detect_Os()
+        print "[*] Starting the service analysis on {} ".format(Detect_Os())
         #We began to detect de services tha is running
         Detect_Services()
-        print "[+] find the file in " + socket.gethostname() + "/services.txt"
+        print "[+] find the file in {}/services.txt".format(socket.gethostname())
     else:
         #In case that de SO be windows
         if(Detect_Os()=='Windows'):
             #Create de directory where the information gonna save_installed_apps
             subprocess.call(['mkdir', hostname], shell = True) #On windows run well
-            print "[*] Starting the application analysis on " + Detect_Os()
+            '''
+            In some cases, the command mkdir, don't excute fast in the system and when the fuction scan, want to
+            create a path on that directory, this does not exist yet 
+            '''
+            time.sleep( 3 )
+            print "[*] Starting the application analysis on {}".format(Detect_Os())
             #we begin detection the application's install in the host
             apps_installed()
             print "[+] the application analysis finished"
-            print "[+] find the file here " + socket.gethostname() + '/Apps.txt' + "\n"
-            print "[*] Starting the service analysis on " + Detect_Os()
+            print "[+] find the file here {}/Apps.txt \n".format(socket.gethostname())
+            print "[*] Starting the service analysis on {}".format(Detect_Os())
             #We began to detect de services tha is running
             Detect_Services()
-            print "[+] find the file in " + socket.gethostname() + "/services.txt"
+            print "[+] find the file in {}/services.txt".format(socket.gethostname())
         else:
             #In case that de SO be windows
             if(Detect_Os()=='darwin'):
