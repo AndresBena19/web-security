@@ -298,7 +298,7 @@ if __name__ == '__main__':
             #Create de directory where the information gonna save_installed_apps
             subprocess.call(['mkdir', hostname], shell = True) #On windows run well
             '''
-            In some cases, the command mkdir, don't excute fast in the system and when the fuction scan, want to
+            In some cases, the command mkdir, don't execute quickly on the system and when the fuction scan, want to parse the system, want to
             create a path on that directory, this does not exist yet 
             '''
             time.sleep( 3 )
