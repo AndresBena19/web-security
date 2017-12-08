@@ -1,7 +1,7 @@
 '''
 Author: Xion security
 Date: March 2017
-Name: RunAP.py
+Name: Lapps.py
 Purpose: To scan the host and his local network with the main  purpuse to find the install aplication's and service running
 
 Copyright (c) 2017, Xion security All rights reserved.
