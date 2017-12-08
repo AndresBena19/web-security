@@ -1,4 +1,4 @@
-# Detection application's#
+# Detection application's #
 
 El siguiente script tiene como principal objetivo  detectar que aplicaciones y que version de la misma, se encuentran instaladas, ademas hace uso del modulo python-nmap, que le permite descubrir que servicios se encuentran activos  y cada una de sus interfaces 
 
@@ -49,7 +49,7 @@ PortScannerError 'nmap' don't have the attribure PortScanner
 
 ## Run Process  ##
 
-Firt we need to run the setup.py, this gonna install all the libraries necesaro for the correct execution of the script
+Firt we need to run the setup.py , this gonna install all the libraries necesary for the correct execution of the script
 
 ```
 Python setup.py
