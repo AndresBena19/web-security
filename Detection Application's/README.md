@@ -14,12 +14,28 @@ El siguiente script tiene como principal objetivo  detectar que aplicaciones y q
 	* subprocess library (Default)
 	* socket library (Default)
 	* Platform library (Default)
-	
-## Issues  ##
+
+
+## issues ##
+
+
+´´´
+PortScannerError: 'nmap program was not found in path. PATH is : C:\\Python27;C:\\Python27\\S
+cripts;C:\\WINDOWS\\System32\\wbem;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\
+WBEM;C:\\Users\\andresfelipe\\AppData\\Local\\GitHubDesktop\\bin;C:\\Python27'
+
+´´´
+
+´´´
+PortScannerError 'nmap' don't have the attribure PortScanner
+
+´´´
+
+## Solutions  ##
 
 
 + Windows 
-	* you must install nmap proyect 
+	* you must install nmap project 
 	+ You must establish
 		* C:\Python27 (we need for the execution) 
 		* C:\Python27\Scripts (We need pip to install the libraries
@@ -27,6 +43,9 @@ El siguiente script tiene como principal objetivo  detectar que aplicaciones y q
 		* C:\Program Files (x86)\Nmap , (the method PortScanner don't work good on windows, this fix that)
 		 
  
+
+
+
 
 ## Run Process  ##
 
