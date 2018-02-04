@@ -15,8 +15,8 @@ namespace FirstApp
             {
                 try
                 {
-                    var fromAddress = new MailAddress("Probes@gmail.com");
-                    const string fromPassword = "NWpsYTBmejEzdTcw";
+                    var fromAddress = new MailAddress("xxxxx@gmail.com");
+                    const string fromPassword = "xxxxxx";
                     var Smtp = new SmtpClient
                     {
 
@@ -60,8 +60,8 @@ namespace FirstApp
             /* Add some atribute to the message object*/ 
             message.Body = "<div><label>Saludos Ivan, Necesito que me envios los datos  del curso con NRC:1163 (desarrollo de aplicaciones .net)  para realizar realizar la prematricula y seleccion de los curso del proxim... Sorry, just Me  Andres Benavides, with code T00038399, supplanting the identity of the director :v and please don't open this link goo.gl/6EK5Uu ;) </label></div>";
             message.Subject = "Urgente ";
-            message.From = new MailAddress("jairo@utbvirtual.edu.co", "<Jairo Enrique Serrano Castañeda>");
-            message.To.Add("<jrnp1997@gmail.com>");
+            message.From = new MailAddress("sorce@gmail.com", "<xxxxxx>");
+            message.To.Add("<Destination@gmail.com>");
    
 
             /* Here we declare a new instance of the Spoofmail class */
