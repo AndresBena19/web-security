@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import fractions 
+import fractions
 
 def fun(a):
 
@@ -13,7 +13,7 @@ def fun(a):
  while(x!=1):
   if(((m%x)<(m/x)) and fractions.gcd(i,m-1)==1):
    w=(a**i)%m
-   dict.insert(cont,int(w))
+   dictq.insert(cont,int(w))
    cont=cont+1
   q=m/a
   r=m%a
@@ -29,11 +29,11 @@ def fun(a):
 
 
 if __name__ == "__main__":
-  dict=[]
+  dictq=[]
   b=fun(3)
 
-  print "The full periods multipliers modulus compatible:"
-  print dict
+  print ("The full periods multipliers modulus compatible:")
+  print (dictq)
 
 
   print "The number of items:",b
