@@ -39,8 +39,8 @@ def ClientesOut(aif,sif,dif,tif,a):
        else:
           contout=contout+1
        i=i+1
-    print "Clientes seguros", str(cont)
-    print "Cliente que no soportaron", str(contout)
+    print ("Clientes seguros", str(cont))
+    print ("Cliente que no soportaron", str(contout))
     return  cont,contout
 
 
@@ -104,7 +104,7 @@ def Lifo(ai,si,bi,di,a):
 
  di = delay(ai,si,50)
  Ssi=0.0
-    
+
  for x in range(0, len(si)):
    Ssi=Ssi+si[x]
 
@@ -121,11 +121,11 @@ def Lifo(ai,si,bi,di,a):
 
  print ("*********************************************************************")
 
- print " Sistema de cola LIFO "
- print "********************************************"
+ print (" Sistema de cola LIFO ")
+ print ("********************************************")
  """ print "Arrival time /  Service begin  / Delay time  / Service time / Tolerance"
  for x in range(50):
-  if(ti[x]<di[x]): 
+  if(ti[x]<di[x]):
      state="Desertor"
   else:
      state=""
@@ -134,8 +134,8 @@ def Lifo(ai,si,bi,di,a):
 
  print ("********************************************")
  """
- print "Statistics of service time = " + str(Stsi)
- print "Statistics of arrival time = " + str(Stai)
+ print ("Statistics of service time = " + str(Stsi))
+ print ("Statistics of arrival time = " + str(Stai))
  cont, contout = ClientesOut(ai,si,di,ti,50)
  return cont, contout
 
@@ -146,7 +146,7 @@ def Lifo(ai,si,bi,di,a):
 def Fifo(ai,si,bi,di,a):
  di = delay(ai,si,50)
  Ssi=0.0
- 
+
  for x in range(0, len(si)):
    Ssi=Ssi+si[x]
 
@@ -162,12 +162,12 @@ def Fifo(ai,si,bi,di,a):
    bi.insert(x , ai[x]+di[x])
 
 
- print " Sistema de cola FIFO "
- print "********************************************"
- 
+ print (" Sistema de cola FIFO ")
+ print ("********************************************")
+
  """print "Arrival time /  Service begin  / Delay time  / Service time / Tolerance"
  for x in range(50):
-  if(ti[x]<di[x]): 
+  if(ti[x]<di[x]):
      state="Desertor"
   else:
      state=""
@@ -176,8 +176,8 @@ def Fifo(ai,si,bi,di,a):
 
  print ("********************************************")
  """
- print "Statistics of service time = " + str(Stsi)
- print "Statistics of arrival time = " + str(Stai)
+ print ("Statistics of service time = " + str(Stsi))
+ print ("Statistics of arrival time = " + str(Stai))
 
  cont, contout= ClientesOut(ai,si,di,ti,50)
  return cont, contout
@@ -187,7 +187,7 @@ def Fifo(ai,si,bi,di,a):
 def Siro(ai,si,bi,di,a):
  di = delay(ai,si,50)
  Ssi=0.0
- 
+
  for x in range(0, len(si)):
    Ssi=Ssi+si[x]
 
@@ -203,12 +203,12 @@ def Siro(ai,si,bi,di,a):
    bi.insert(x , ai[x]+di[x])
 
 
- print " Sistema de cola SIRO "
- print "********************************************"
- 
+ print (" Sistema de cola SIRO ")
+ print ("********************************************")
+
  """print "Arrival time /  Service begin  / Delay time  / Service time / Tolerance"
  for x in range(50):
-  if(ti[x]<di[x]): 
+  if(ti[x]<di[x]):
      state="Desertor"
   else:
      state=""
@@ -217,8 +217,8 @@ def Siro(ai,si,bi,di,a):
 
  print ("********************************************")
  """
- print "Statistics of service time = " + str(Stsi)
- print "Statistics of arrival time = " + str(Stai)
+ print ("Statistics of service time = " + str(Stsi))
+ print ("Statistics of arrival time = " + str(Stai))
 
  cont, contout= ClientesOut(ai,si,di,ti,50)
  return cont, contout
@@ -252,11 +252,11 @@ if __name__ == "__main__":
  acumSiro=0
 
 
- for c in range(100):
+ for c in range(1):
 
    #Generando valores aleatorios de tiempo de llegada
    ai= np.random.normal(media,desviacion,50)
-   #Generando valores de tolerancia 
+   #Generando valores de tolerancia
    ti = np.random.normal(10,2,50)
    #Generando valores aleatorios de tiempo de servicio
    Mx = max(siI)
@@ -291,8 +291,7 @@ if __name__ == "__main__":
    acumSiro=acumSiro+contout2
 
 
- print  "++++++++++++++++++++++++++++++++++++"
- print  "Promedio de desertores en FIFO:"+ str(acumFifo/100)
- print  "Promedio de desertores en LIFO:"+ str(acumLifo/100)
- print  "Promedio de desertores en SIRO:"+ str(acumSiro/100)
-
+ print  ("++++++++++++++++++++++++++++++++++++")
+ print  ("Promedio de desertores en FIFO:"+ str(acumFifo/100))
+ print  ("Promedio de desertores en LIFO:"+ str(acumLifo/100))
+ print  ("Promedio de desertores en SIRO:"+ str(acumSiro/100))
