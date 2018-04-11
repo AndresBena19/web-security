@@ -1,4 +1,4 @@
 # DISCLAIMER #
 
 
-Todo lo aqui mostrado  se hace con fines educativo no me hago responsable por el uso indebido de la información contenida en este repositorio.
+Everything shown here has been done for educational purposes I am not responsible for the misuse of the information contained in this repository.
